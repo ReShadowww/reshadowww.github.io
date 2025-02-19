@@ -68,7 +68,7 @@
             age = list_of_things[1]
             mass = list_of_things[2]
             immunoSuppressive = list_of_things[3]
-            sickWithFlu = list_of_things[4]
+            let sickWithFlu = document.getElementById("sickWithFlu").value === "true";
 
             let resultText = document.getElementById("result").innerText
 
@@ -81,7 +81,7 @@
                         { text: `Paciento amžius: ${age}m.` },
                         { text: `Paciento svoris: ${mass} kg` },
                         { text: `Susilpnėjęs imunitetas: ${immunoSuppressive === "true" ? "Taip" : "Ne"}` },
-                        { text: `Serga gripu: ${sickWithFlu === "true" ? "Taip" : "Ne"}` },
+                        { text: `Serga gripu: ${sickWithFlu ? "Taip" : "Ne (Oseltamivir bus vartojama profilaktikai)"}` },
                         { text: " " },
                         { text: 'Rekomenduojama dozė:', style: 'header' },
                         { text: resultText },
@@ -102,7 +102,7 @@
                         { text: `Paciento amžius: ${age}m.` },
                         { text: `Paciento svoris: ${mass} kg` },
                         { text: `Susilpnėjęs imunitetas: ${immunoSuppressive === "true" ? "Taip" : "Ne"}` },
-                        { text: `Serga gripu: ${sickWithFlu === "true" ? "Taip" : "Ne"}` },
+                        { text: `Serga gripu: ${sickWithFlu == "true" ? "Taip" : "Ne (Oseltamivir bus vartojama profilaktikai)"}` },
                         { text: " " },
                         { text: 'Rekomenduojama dozė:', style: 'header' },
                         { text: resultText },
